@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 const router: Router = express.Router();
 app.use('/', router);
-cron.schedule('0 13 * * *', sendWeatherWhatsAppCallApi);
+cron.schedule('20 13 * * *', sendWeatherWhatsAppCallApi);
 
 router.get('/sendWeatherWhatsApp', async (req: Request, res: Response) => {
   try {
