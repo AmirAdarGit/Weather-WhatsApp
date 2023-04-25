@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watching": "nodemon"
+    "watching": "nodemon",
+    "start": "node src/index.js",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
