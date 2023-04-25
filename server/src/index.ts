@@ -1,7 +1,5 @@
 
 import app from './app';
-import cron from 'node-cron';
-import { sendWeatherWhatsAppCallApi } from "./cron";
 
 
 const port = process.env.PORT;

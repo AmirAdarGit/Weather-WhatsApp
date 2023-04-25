@@ -10,14 +10,14 @@ const app = express();
 app.use(bodyParser.json());
 const router: Router = express.Router();
 app.use('/', router);
-cron.schedule('30 12 * * *', sendWeatherWhatsAppCallApi);
+cron.schedule('0 13 * * *', sendWeatherWhatsAppCallApi);
 
 router.get('/sendWeatherWhatsApp', async (req: Request, res: Response) => {
   try {
     const location = await getLocation()
     const weather = await getWeather(location.lat, location.lon)
     await sendMessageToWhatsApp(weather)
-    res.json().status(200)
+    res.json("ok!").status(200)
   } catch (e) {
     res.status(500)
   }
