@@ -4,7 +4,10 @@ import axios from 'axios';
 
 
 export const sendWeatherWhatsAppCallApi = () =>  {
-  axios.get('https://weather-whatsapp-service-8.onrender.com/sendWeatherWhatsApp')
+
+
+  console.log("here!!!!!!")
+  axios.get('https://weather-whatsapp-service-8.onrender.com:4000/sendWeatherWhatsApp')
     .then(response => {
       console.log(response.data); // or do something else with the response
     })
