@@ -23,4 +23,12 @@ router.get('/sendWeatherWhatsApp', async (req: Request, res: Response) => {
   }
 });
 
+router.get('/', async (req: Request, res: Response) => {
+  try {
+    res.json("ok!").status(200)
+  } catch (e) {
+    res.status(500)
+  }
+});
+
 export default app;
