@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 const router: Router = express.Router();
 app.use('/', router);
-cron.schedule('40 17 * * *', sendWeatherWhatsAppCallApi, {
+cron.schedule('0 9 * * *', sendWeatherWhatsAppCallApi, {
   timezone: "Asia/Jerusalem"
 });
 router.get('/sendWeatherWhatsApp', async (req: Request, res: Response) => {
