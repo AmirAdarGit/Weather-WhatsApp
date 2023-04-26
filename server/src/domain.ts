@@ -5,6 +5,7 @@ import twilio from 'twilio';
 
 export const getLocation = async () => {
 const ans = await axios.get('http://ip-api.com/json/?fields=61439')
+  console.log(ans)
   return ans.data
 }
 

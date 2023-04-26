@@ -15,8 +15,8 @@ cron.schedule('32 15 * * *', sendWeatherWhatsAppCallApi, {
 });
 router.get('/sendWeatherWhatsApp', async (req: Request, res: Response) => {
   try {
-    const location = await getLocation()
-    const weather = await getWeather(location.lat, location.lon)
+    // const location = await getLocation()
+    const weather = await getWeather("32.0803", "34.7805") // the location of the localhost server is Tel Aviv, but the production server is on Portland, so the location is Tel Aviv
     await sendMessageToWhatsApp(weather)
     res.json("ok!").status(200)
   } catch (e) {
